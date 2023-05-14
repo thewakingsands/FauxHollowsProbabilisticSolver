@@ -3,14 +3,16 @@
 
 <head>
 	<!--Site written by Fyrin Niyuun @ Behemoth. Formerly Fyrin Niyuun @ Faerie-->
-	<title>Faux Hallows Solver</title>
+	<title>幻巧拼图计算器</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="shortcut icon" href="images/logo.png" type="image/png">
+	<!-- 用不了字体
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+-->
 	<script type="text/javascript" src="data.js"></script>
 </head>
 
@@ -168,113 +170,113 @@
 				<div class="dp-high rounded controls">
 					<form action id="picker">
 						<div class="radiocontainer noselect">
-							<label id="button1" for="blockedradiobutton" class="radiobuttonlabel optransition" title="Blocked">
+							<label id="button1" for="blockedradiobutton" class="radiobuttonlabel optransition" title="固定块">
 								<input type="radio" id="blockedradiobutton" name="pickeritem" value="blocked" checked>
 								<img src="images/blocked.png" class="radioimage" draggable="false" ondragstart="return false;"/>
 							</label>
-							<label for="button1" class="radiocaption">Blocked</label>
+							<label for="button1" class="radiocaption">固定块</label>
 						</div>
 						<div class="radiocontainer radiospace noselect">
-							<label id="button2" for="missedradiobutton" class="radiobuttonlabel optransition" title="Missed">
+							<label id="button2" for="missedradiobutton" class="radiobuttonlabel optransition" title="空白">
 								<input type="radio" id="missedradiobutton" name="pickeritem" value="missed">
 								<img src="images/missed.png" class="radioimage" draggable="false" ondragstart="return false;"/>
 							</label>
-							<label for="button2" class="radiocaption">Missed</label>
+							<label for="button2" class="radiocaption">空白</label>
 						</div>
 						<div class="radiocontainer radiospace noselect">
-							<label id="button3" for="chestradiobutton" class="radiobuttonlabel optransition" title="Chest">
+							<label id="button3" for="chestradiobutton" class="radiobuttonlabel optransition" title="宝箱">
 								<input type="radio" id="chestradiobutton" name="pickeritem" value="chest">
 								<img src="images/chest.png" class="radioimage" draggable="false" ondragstart="return false;"/>
 							</label>
-							<label for="button3" class="radiocaption">Coffer</label>
+							<label for="button3" class="radiocaption">宝箱</label>
 						</div>
 						<div class="radiocontainer radiospace noselect">
-							<label id="button4" for="swordsradiobutton" class="radiobuttonlabel optransition" title="Swords">
+							<label id="button4" for="swordsradiobutton" class="radiobuttonlabel optransition" title="双剑">
 								<input type="radio" id="swordsradiobutton" name="pickeritem" value="swords">
 								<img src="images/swords.png" class="radioimage" draggable="false" ondragstart="return false;"/>
 							</label>
-							<label for="button4" class="radiocaption">Swords</label>
+							<label for="button4" class="radiocaption">双剑</label>
 						</div>
 						<div class="radiocontainer radiospace noselect">
-							<label id="button5" for="foxradiobutton" class="radiobuttonlabel optransition" title="Fox">
+							<label id="button5" for="foxradiobutton" class="radiobuttonlabel optransition" title="宗长">
 								<input type="radio" id="foxradiobutton" name="pickeritem" value="fox">
 								<img src="images/fox.png" class="radioimage" draggable="false" ondragstart="return false;"/>
 							</label>
-							<label for="button5" class="radiocaption">Fox</label>
+							<label for="button5" class="radiocaption">宗长</label>
 						</div>
 						<div class="radiocontainer radiospace noselect">
-							<label id="button6" for="clearradiobutton" class="radiobuttonlabel optransition" title="Erase">
+							<label id="button6" for="clearradiobutton" class="radiobuttonlabel optransition" title="清除标记">
 								<input type="radio" id="clearradiobutton" name="pickeritem" value="clear">
 								<img src="images/erase.png" class="radioimage" draggable="false" ondragstart="return false;"/>
 							</label>
-							<label for="button6" class="radiocaption">Erase</label>
+							<label for="button6" class="radiocaption">清除标记</label>
 						</div>
 					</form>
 					<div class="h-separator"></div>
 					<div class="button-row">
 						<label for="menucollapse" id="collapselabel" class="advanced-collapse-label noselect">
 							<input id="menucollapse" type="button" />
-							Advanced
+							高级
 							<div id="arrow" class="arrow"></div>
 						</label>
 						<label for="resetbutton" id="resetbuttonlabel" class="reset-button-label noselect">
 							<input id="resetbutton" type="button" />
-							Reset
+							重置
 						</label>
 					</div>
 					<div id="collapsebox" class="collapse-box">
 						<div class="h-separator"></div>
 						<div class="advanced-settings-box">
 							<form action id="strat" class="strat-form">
-								<h4>Strategy</h4>
+								<h4>策略</h4>
 								<div class="settings-container">
 									<div>
 										<input type="radio" id="strat1" name="strat" value="strat1" checked>
-										<label for="strat1">Probability</label>
+										<label for="strat1">概率</label>
 									</div>
 									<div>
 										<input type="radio" id="strat2" name="strat" value="strat2">
-										<label for="strat2">Swords</label>
+										<label for="strat2">双剑</label>
 									</div>
 									<div>
 										<input type="radio" id="strat3" name="strat" value="strat3">
-										<label for="strat3">Coffer</label>
+										<label for="strat3">宝箱</label>
 									</div>
 									<div>
 										<input type="radio" id="strat4" name="strat" value="strat4">
-										<label for="strat4">Fox</label>
+										<label for="strat4">宗长</label>
 									</div>
 								</div>
 								<div class="settings-container">
 									<div>
 										<input type="radio" id="strat5" name="strat" value="strat5">
-										<label for="strat5">Weighted</label>
+										<label for="strat5">加权</label>
 									</div>
 									<div class="psuedo"></div>
 									<div>
 										<input type="checkbox" id="spreadsheet">
-										<label for="spreadsheet">Fox Sightings</label>
+										<label for="spreadsheet">宗长目击记录</label>
 									</div>
 									<div>
 										<input type="checkbox" id="lookforfox" checked>
-										<label for="lookforfox">Look for Fox</label>
+										<label for="lookforfox">寻找宗长</label>
 									</div>
 								</div>
 								<div class="settings-container">
 									
 									<div style="width: 140px;">
-										Weights
+										权重
 										<div>
 											<input type="number" id="foxweight" value="100" pattern="[0-9]" min="0" max="100" class="weights">
-											<label>Fox</label>
+											<label>宗长</label>
 										</div>
 										<div>
 											<input type="number" id="boxweight" value="35" pattern="[0-9]" min="0" max="100" class="weights">
-											<label id="boxweightlabel">Coffer</label>
+											<label id="boxweightlabel">宝箱</label>
 										</div>
 										<div>
 											<input type="number" id="swordweight" value="30" pattern="[0-9]" min="0" max="100" class="weights">
-											<label>Swords</label>
+											<label>双剑</label>
 										</div>
 									</div>
 								</div>
@@ -282,21 +284,21 @@
 							<div class="settings-container settings-right-align">
 								<form action class="box-type">
 									<div>
-										<label for="box1">Coffer</label>
+										<label for="box1">宝箱</label>
 										<input type="radio" id="box1" name="boxtype" value="box1" onclick="UpdateCoffer();" checked>
 									</div>
 									<div>
-										<label for="box2">Gift Box</label>
+										<label for="box2">礼物盒</label>
 										<input type="radio" id="box2" name="boxtype" value="box2" onclick="UpdateCoffer();">
 									</div>
 								</form>
 								<div class="psuedo"></div>
 								<div>
-									<label for="showstats">Show Stats</label>
+									<label for="showstats">显示期望</label>
 									<input type="checkbox" id="showstats" onclick="ScoresCheckUpdate();">
 								</div>
 								<div>
-									<label for="liveupdate">Live Update</label>
+									<label for="liveupdate">实时更新</label>
 									<input type="checkbox" id="liveupdate" onclick="LiveUpdate(); ScoresCheckUpdate();" checked>
 								</div>
 							</div>
@@ -306,25 +308,25 @@
 			</div>
 			<div id="about" class="contentpane dp-low rounded about">
 				<div class="dp-high rounded about-pane">
-					<h1>Faux Hollows Solver</h1>
+					<h1>幻巧拼图计算器</h1>
 				</div>
 				<div class="h-separator"></div>
 				<div class="dp-high rounded about-pane">
-					<h3 style="margin-top: 0">What's New</h3>
-					<span>New sightings feature integrating <a href="https://www.reddit.com/user/Ylandah/">u/Ylandah</a>'s foxes spreadsheet. See the <a href="https://docs.google.com/spreadsheets/d/1mUyCzlzDmdXMwaSTUgWXtEA45oJNn-iB4_bVM43zf58/">spreadsheet</a> or <a href="https://www.reddit.com/r/ffxiv/comments/u1tl10/faux_hollows_fox_location_guide_and_data_gathering/">Reddit post</a> for more information.</span>
-					<h3>About</h3>
-					<span>Faux Hollows minigame solver for FFXIV.</span>
+					<h3 style="margin-top: 0">最近更新</h3>
+					<span>集成了<a href="https://www.reddit.com/user/Ylandah/">u/Ylandah</a>的藏狐表。查看<a href="https://docs.google.com/spreadsheets/d/1mUyCzlzDmdXMwaSTUgWXtEA45oJNn-iB4_bVM43zf58/">藏狐表</a>（<a href="https://docs.qq.com/sheet/DS3dSWnlEdWZxWFls?tab=BB08JH">QQ文档</a>）或<a href="https://www.reddit.com/r/ffxiv/comments/u1tl10/faux_hollows_fox_location_guide_and_data_gathering/">Reddit原帖</a>了解更多信息。</span>
+					<h3>关于</h3>
+					<span><s>藏狐求解器</s>幻巧拼图计算器</span>
 					<br>
 					<br>
-					<span>The default settings are recommended for most people. Additional options are available in the advanced drop down menu. Most of this contains alternative strategies for focusing on particular game pieces, changing the coffer to a gift box, and more. Feel free to explore.</span>
+					<span>对于大部分人来说使用默认设置即可。点击“高级”可以看到更多选项。主要用于有更多追求的玩家，比如把宝箱换成礼物盒之类的。请随意使用。</span>
 					<br>
-					<h3>Disclaimer</h3>
-					<span>This calculator will NOT guarantee anything. Not a single reward is guaranteed for using this tool. What it provides is a statistical advantage.</span>
+					<h3>免责</h3>
+					<span>本计算器不承诺你能找到宗长，也不承诺你能找到任何奖励。宗长只提供统计上的有利区域。</span>
 					<br>
-					<h3>Contact</h3>
-					<span>This tool was developed by Fyrin Niyuun @ Behemoth.</span>
+					<h3>联系</h3>
+					<span>本工具由 Fyrin Niyuun @ Behemoth开发，阿布evo基于MIT协议中文化。</span>
 					<br>
-					<span>If there are any issues please contact me on Discord at Sturalke#0249, by submitting an issue on Github, or if you find me in game.</span>
+					<span>如果有任何问题，可以通过Discord联系Sturalke#0249，在GitHub上提交issue或在游戏里找他。</span>
 					<br>
 					<br>
 					<span><a href="https://github.com/Sturalke/FauxHollowsProbabilisticSolver">Github</a> | <a href="https://www.reddit.com/user/Sturalke">u/Sturalke</a></span>
