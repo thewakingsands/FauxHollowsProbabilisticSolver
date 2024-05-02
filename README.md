@@ -1,8 +1,7 @@
-# Faux Hollows Solver
-Statistical tool for solving a mini-game in Final Fantasy XIV.
+# 幻巧拼图计算器
 
-### [Link to the site.](https://sturalke.github.io/FauxHollowsProbabilisticSolver/)
+### [网站链接](https://guides.xivcdn.com/FauxHollowsProbabilisticSolver/)
 
-Place information into the grid as it is uncovered in game. Use suggestions given by yellow squares with a target icon.
+按照游戏内给出的固定块位置进行标记。推荐翻开的方块会以黄色标记。
 
-The Fox Sightings feature is left off by default. Open the Advanced drop down to enable it.
+藏狐目击记录功能默认关闭，点击“高级”下拉菜单可以打开。
