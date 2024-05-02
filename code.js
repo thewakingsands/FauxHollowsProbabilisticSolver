@@ -55,8 +55,8 @@ const fhs_sheet_patterns = [
 	[ 3,14,19,22,32],
 	[ 8,12,15,23,26],
 	[ 4, 7,15,25,33],
-	[ 2,10,20,28,31],
 	[ 7,10,18,21,29],
+	[ 2,10,20,28,31],
 	[ 6,14,17,25,28],
 	[ 7,16,18,27,32],
 	[ 2,10,12,19,27],
@@ -102,6 +102,65 @@ document.addEventListener("keydown", function(event) {
 		}
 	}
 });
+
+/*
+
+	Settings Cookie Listeners
+
+*/
+
+document.getElementById("advancedsettings").addEventListener("change", function()   {
+	SaveSettingsToCookie();
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+	RestoreSettingsFromCookie();
+});
+
+function SaveSettingsToCookie() {
+	const strat1Checked = document.getElementById("strat1").checked;
+	const strat2Checked = document.getElementById("strat2").checked;
+	const strat3Checked = document.getElementById("strat3").checked;
+	const strat4Checked = document.getElementById("strat4").checked;
+	const strat5Checked = document.getElementById("strat5").checked;
+
+	const spreadsheetChecked = document.getElementById("spreadsheet").checked;
+	const lookforfoxChecked = document.getElementById("lookforfox").checked;
+	const showstatsChecked = document.getElementById("showstats").checked;
+	const liveupdateChecked = document.getElementById("liveupdate").checked;
+
+	const settings = {
+		strat1: strat1Checked,
+		strat2: strat2Checked,
+		strat3: strat3Checked,
+		strat4: strat4Checked,
+		strat5: strat5Checked,
+		spreadsheet: spreadsheetChecked,
+		lookforfox: lookforfoxChecked,
+		showstats: showstatsChecked,
+		liveupdate: liveupdateChecked
+	};
+
+	localStorage.setItem("settings", JSON.stringify(settings));
+}
+
+function RestoreSettingsFromCookie() {
+	const settingsCookie = localStorage.getItem("settings");
+	if(settingsCookie == null) return;
+	
+	const settingsObject = JSON.parse(settingsCookie);
+
+	document.getElementById("strat1").checked = settingsObject.strat1;
+	document.getElementById("strat2").checked = settingsObject.strat2;
+	document.getElementById("strat3").checked = settingsObject.strat3;
+	document.getElementById("strat4").checked = settingsObject.strat4;
+	document.getElementById("strat5").checked = settingsObject.strat5;
+
+	document.getElementById("spreadsheet").checked = settingsObject.spreadsheet;
+	document.getElementById("lookforfox").checked = settingsObject.lookforfox;
+	document.getElementById("showstats").checked = settingsObject.showstats;
+	document.getElementById("liveupdate").checked = settingsObject.liveupdate;
+}
 
 
 
@@ -212,6 +271,7 @@ Array.prototype.forEach.call(weightFeilds, function(weight) {
 	End Listeners
 
 */
+
 
 
 function CellClick() {
